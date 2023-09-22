@@ -6,7 +6,6 @@ import { tokenManager } from "../service/tokenManager";
 import { userDatabase } from "../database/userDataBase";
 import { postDataBase } from "../database/postDatabase";
 
-
 export const postsRouter = express.Router();
 const postsController = new PostsController(
   new PostsBusiness(
@@ -16,10 +15,8 @@ const postsController = new PostsController(
     new userDatabase()
   )
 );
-
 postsRouter.post("/", postsController.createPost);
 postsRouter.get("/", postsController.getPosts);
 postsRouter.put("/:id", postsController.editPosts);
 postsRouter.delete("/:id", postsController.deletePost);
-
 postsRouter.put("/:id/like", postsController.likeDislike)
