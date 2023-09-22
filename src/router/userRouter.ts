@@ -6,8 +6,6 @@ import { tokenManager } from "../service/tokenManager"
 import { HashManager } from "../service/hashManager"
 import { UserController } from "../controller/userController"
 
-
-
 export const userRouter = express.Router()
 const userController = new UserController( 
     new UserBusiness(
@@ -17,7 +15,5 @@ const userController = new UserController(
         new HashManager()
     )
 )
-
 userRouter.post("/singup", userController.signup)
-
 userRouter.post("/loogin", userController.login)

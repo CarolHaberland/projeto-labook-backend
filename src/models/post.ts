@@ -1,6 +1,5 @@
 import { GetPostsFromUser } from "./users";
 
-
 export interface GetPostsModel {
     id: string;
     content: string;
@@ -10,7 +9,6 @@ export interface GetPostsModel {
     updatedAt: string;
     creator: GetPostsFromUser;
   }
-
 
 export interface PostsDB {
     id: string;
@@ -22,7 +20,6 @@ export interface PostsDB {
     updated_at: string;
   }
   
-
   export interface likeDislikeDB{
     user_id:string;
     post_id:string;
